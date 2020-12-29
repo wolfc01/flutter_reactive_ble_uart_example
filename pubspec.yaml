@@ -1,0 +1,22 @@
+name: ble_testapp
+description: flutter ble testapp
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.0
+  flutter_reactive_ble: ^2.7.1
+  location_permissions: ^3.0.0+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
