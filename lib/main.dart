@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_reactive_ble/flutter_reactive_ble.dart';
-//import 'package:location_permissions/location_permissions.dart';
-
+import 'package:location_permissions/location_permissions.dart';
+import 'dart:io' show Platform;
 
 // This flutter app demonstrates an usage of the flutter_reactive_ble flutter plugin
 // This app works only with BLE devices which advertise with a Nordic UART Service (NUS) UUID
@@ -110,10 +110,16 @@ class _MyHomePageState extends State<MyHomePage> {
     );
 
   void _startScan() async {
-    _scanning = true; //TODO: remove this line, is for IOS test
-    //PermissionStatus permission;
-    //permission = await LocationPermissions().requestPermissions();
-    if (true) { //TODO replace True with permission == PermissionStatus.granted is for IOS test
+    bool goForIt=false;
+    PermissionStatus permission;
+    if (Platform.isAndroid) {
+      permission = await LocationPermissions().requestPermissions();
+      if (permission == PermissionStatus.granted)
+        goForIt=true;
+    } else if (Platform.isIOS) {
+      goForIt=true;
+    }
+    if (goForIt) { //TODO replace True with permission == PermissionStatus.granted is for IOS test
       _foundBleUARTDevices = [];
       _scanning = true;
       refreshScreen();
