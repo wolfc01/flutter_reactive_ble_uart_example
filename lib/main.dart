@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_reactive_ble/flutter_reactive_ble.dart';
-import 'package:location_permissions/location_permissions.dart';
+//import 'package:location_permissions/location_permissions.dart';
 
 
 // This flutter app demonstrates an usage of the flutter_reactive_ble flutter plugin
@@ -111,8 +111,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _startScan() async {
     _scanning = true; //TODO: remove this line, is for IOS test
-    PermissionStatus permission;
-    permission = await LocationPermissions().requestPermissions();
+    //PermissionStatus permission;
+    //permission = await LocationPermissions().requestPermissions();
     if (true) { //TODO replace True with permission == PermissionStatus.granted is for IOS test
       _foundBleUARTDevices = [];
       _scanning = true;
