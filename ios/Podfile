@@ -1,4 +1,4 @@
-target 'nl.wolff-online.uartBle' do
+target 'Runner' do
 
 platform :ios, '11.0'
 workspace './Runner.xcworkspace/'
