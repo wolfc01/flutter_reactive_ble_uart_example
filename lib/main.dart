@@ -113,7 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
     _scanning = true; //TODO: remove this line, is for IOS test
     PermissionStatus permission;
     permission = await LocationPermissions().requestPermissions();
-    if (permission == PermissionStatus.granted) {
+    if (true) { //TODO replace True with permission == PermissionStatus.granted is for IOS test
       _foundBleUARTDevices = [];
       _scanning = true;
       refreshScreen();
