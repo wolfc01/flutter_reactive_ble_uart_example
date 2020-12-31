@@ -1,6 +1,3 @@
-platform :ios, '11.0'
-
-
 target 'nl.wolff-online.uartBle' do
 
 platform :ios, '11.0'
