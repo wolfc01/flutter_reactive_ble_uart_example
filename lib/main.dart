@@ -110,6 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
 
   void _startScan() async {
+    _scanning = true; //TODO: remove this line, is for IOS test
     PermissionStatus permission;
     permission = await LocationPermissions().requestPermissions();
     if (permission == PermissionStatus.granted) {
