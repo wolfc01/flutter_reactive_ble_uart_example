@@ -1,1 +1,12 @@
 platform :ios, '11.0'
+
+
+target 'nl.wolffonline.uartble' do
+
+platform :ios, '11.0'
+workspace './Runner.xcworkspace/'
+project './Runner.xcodeproj/'
+
+pod 'Runner'
+
+end
