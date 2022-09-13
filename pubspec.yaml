@@ -4,14 +4,14 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: '>=2.18.0 <3.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.0
-  flutter_reactive_ble: ^2.7.1
-  location_permissions: ^3.0.0+1
+  cupertino_icons: ^1.0.5
+  flutter_reactive_ble: ^5.0.2
+  permission_handler: ^10.0.0
 
 dev_dependencies:
   flutter_test:
